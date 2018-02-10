@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Bank Application</h1>
+            </div>
+            <div class="col-md-6">
+ 
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-primary" (click)="redirectNewAccountPage()">New Account</button>
+              </div>
+          </div>
+
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Account Name</th>
+            <th>Balance</th>
+            <th></th>
+          </tr> 
+          </thead>
+          <tbody>
+          <tr *ngFor="let account of accounts">
+            <th scope="row"></th>
+            <td>{{account.nameAccount}}</td>
+            <td>{{account.balance}}</td>
+            <td>              
+              <button type="button" class="btn btn-success" (click)="opUserPage(account)">Operation</button>
+              <button type="button" class="btn btn-danger" (click)="historyUserPage(account)">History</button>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

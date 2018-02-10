@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Bank Application</h1>
+            </div>
+            <div class="col-md-8">
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label>Account Name : </label>
+              <b>{{nameAcc}}</b>
+            </div>
+            <div class="col-md-6">
+              </div>
+              <div class="col-md-2">
+                  <button type="button" class="btn btn-warning" (click)="redirectAccountPage()">Go back</button>
+              </div>
+          </div>
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>From </th>
+            <th>To </th>
+            <th>Operation type</th>
+            <th>Balance</th>
+            <th>Date Operation</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let operation of operations">
+            <td>{{operation.from}}</td>
+            <td>{{operation.to}}</td>
+            <td>{{operation.op}}</td>            
+            <td>{{operation.amount}}</td>
+            <td>{{operation.dateOperation}}</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
